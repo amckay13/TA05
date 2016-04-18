@@ -28,6 +28,7 @@
 	$_SESSION["script"] = $_SERVER["PHP_SELF"];
 	$scriptName = $_SESSION["script"];
 	$topPart = <<<EOBODY
+	<link href="bootstrap.min.css" rel="stylesheet">
 		<form action="navigating.php" method="post">
 			<input type="submit" name="back_profileSelect" style="width:60px; height:45px;" value="Back to Profiles" /><br />
 			<p>&nbsp;</p>
@@ -45,7 +46,8 @@
 			<p>
 				<input type="submit" name="submitInfoButton" />
 			</p>
-		</form>		
+		</form>	
+		<script src="js/bootstrap.min.js"></script>
 EOBODY;
 	$body = $topPart.$body;
 	

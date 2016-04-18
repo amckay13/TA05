@@ -2,6 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Account Info</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
     </head>
     
     <body>
@@ -21,5 +22,6 @@
             <li>Brooklyn</li>
         </ul>
         
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

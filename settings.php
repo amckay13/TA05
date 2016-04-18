@@ -2,14 +2,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Parent Settings</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
     </head>
     
     <body>
-        <form action="settingsMenu.php" method="post">
-            <input type="submit" name="back_menu" value="Back to Menu" />
-        </form>
-        
-        <h1>Account Settings</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Profiles</a>
+                </div>
+                <div class="col-sm-10">
+                    <h1 class="h1">Account Settings</h1>
+                </div>
+            </div>
+        </div>
         
         <form action="confirm.php" method="post">
             <b>Text Language Control</b><br>
@@ -33,5 +39,6 @@
             <input type="submit" name="save" value="Save Changes">
         </form>
         
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

@@ -2,6 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Bookstore</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
     </head>
     
     <body>
@@ -23,5 +24,7 @@
         
         <a href="confirm.php"><img src="http://ecx.images-amazon.com/images/I/61Qtq-ioyiL._SX258_BO1,204,203,200_.jpg" alt="Goldilocks" height="200" width="150"></a><br>
         <b>Goldilocks</b><br><br>
+        
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

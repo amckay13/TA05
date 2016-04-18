@@ -21,6 +21,17 @@
     }
 	
 	if (isset($_POST["profile3"])) {
-        header("Location:login.html");
+        header("Location:login.php");
     }
+	
+	if (isset($_POST["submitInfoButton"])) {
+		$nameValue = trim($_POST["name"]);
+		$passwordValue = trim($_POST["password"]);
+		
+		if ($nameValue !== "Mom" || $nameValue === "" || $passwordValue === "" || ($passwordValue !== "readingrocks"))
+			header("Location:login.php");
+		if ($body == "") {
+			header("Location:settingsMenu.php");
+		}
+	} 
 ?>

@@ -2,9 +2,10 @@
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
         <title>Landing Page</title>
-        <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
+<div class="container text-center">
     <body>
         <header class="header">
             <h1>Welcome to Storybook</h1>
@@ -14,12 +15,15 @@
             <img src="http://spectrumpediatrics.com/blog/pdf/Bilingual-Kids.jpg" width="540" height="360" alt="LandingPhoto" />          
             <p>&nbsp;</p>
 			<form action="navigating.php" method="post">
-				<input type="submit" name="profile" value="Choose Profile" /><br />
+				<input type="submit" name="profile"  class="btn btn-primary" value="Choose Profile" /><br />
 			</form>
 			<p>&nbsp;</p>
         </section>
         <footer id="end">
             &copy; Copyright 2016
         </footer>
+</div>
+		
+		<script src="js/bootstrap.min.js"></script>
     </body>  
 </html>

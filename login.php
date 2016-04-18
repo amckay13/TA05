@@ -16,7 +16,7 @@
 			$body .= "<h1><strong>Invalid login information provided.</strong></h1>";
 		if ($body == "") {
 			$_SESSION['user'] = $nameValue;
-			echo '<script type="text/javascript"> window.open("settings.php","_self");</script>';
+			echo '<script type="text/javascript"> window.open("settingsMenu.php","_self");</script>';
 		}
 	} else {
 		$nameValue = "";

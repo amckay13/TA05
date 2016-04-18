@@ -3,6 +3,7 @@
         <meta http-equiv="Content=Type" content="text/html; charset=UTF-8" />
         <title>Confirmation</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
     </head>
     <body>
         <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>

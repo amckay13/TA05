@@ -28,7 +28,6 @@
 	$_SESSION["script"] = $_SERVER["PHP_SELF"];
 	$scriptName = $_SESSION["script"];
 	$topPart = <<<EOBODY
-		<h1><strong>Grades Submisson Server</strong></h1>
 		<form action="navigating.php" method="post">
 			<input type="submit" name="back_profileSelect" style="width:60px; height:45px;" value="Back to Profiles" /><br />
 			<p>&nbsp;</p>

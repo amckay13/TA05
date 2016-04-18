@@ -10,7 +10,7 @@
         
         <div class="container text-center">
             <h1 class="h1">Account Settings</h1>
-        </div
+        </div>
         <br>
         
         <div class="container">
@@ -33,7 +33,7 @@
                 <input type="radio" name="connection" value="Facetime"> Facetime<br>
                 <input type="radio" name="connection" value="web"> Web Host<br><br>
                 
-                <input type="submit" name="save" value="Save Changes">
+                <input type="submit" name="save" value="Save Changes" class="btn btn-primary">
             </form>
         </div>
         

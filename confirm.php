@@ -5,11 +5,12 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-        <h3>Success!</h3>
+        <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
         
-        <form action="settingsMenu.php" method="post">
-            <input type="submit" value="Back to Parent Menu">
-        </form>
+        <div class="container text-center">
+            <h1 class="h1">Success!</h1>
+        </div>
+        <br>
         
         <script src="js/bootstrap.min.js"></script>
     </body>

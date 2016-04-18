@@ -1,5 +1,7 @@
 package com.example.user.storybookapp;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.IOException;
 
 public class StoryPageActivity extends AppCompatActivity {
 
@@ -40,6 +45,7 @@ public class StoryPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_page);
 
+        //gifView = (GIFView) findViewById(R.id.section_gif);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -115,7 +121,70 @@ public class StoryPageActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_story_page, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(getString(R.string.section_format, 1+getArguments().getInt(ARG_SECTION_NUMBER)));
+            TextView textView1 = (TextView) rootView.findViewById(R.id.section_text1);
+            TextView textView2 = (TextView) rootView.findViewById(R.id.section_text2);
+            Resources res = getResources();
+
+            ImageView ivGif = (ImageView) rootView.findViewById(R.id.section_image);
+
+           /* GIFView gifView= (GIFView)rootView.findViewById(R.id.section_gif);
+            String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            int pic = res.getIdentifier(imageFile, "raw", getContext().getPackageName());
+            gifView.setGIF(pic);*/
+            //imageView.setImageResource(pic);
+            GifAnimationDrawable gif;
+            int pic_id = 0;
+            switch(getArguments().getInt(ARG_SECTION_NUMBER)){
+                case 0:
+                    pic_id = R.raw.bunny1;
+                    break;
+                case 1:
+                    pic_id = R.raw.bunny2;
+                    break;
+                case 2:
+                    pic_id = R.raw.bunny3;
+                    break;
+                case 3:
+                    pic_id = R.raw.bunny4;
+                    break;
+                case 4:
+                    pic_id = R.raw.bunny5;
+                    break;
+                case 5:
+                    pic_id = R.raw.bunny6;
+                    break;
+                case 6:
+                    pic_id = R.raw.bunny7;
+                    break;
+                case 7:
+                    pic_id = R.raw.bunny8;
+                    break;
+                case 8:
+                    pic_id = R.raw.bunny9;
+                    break;
+            }
+
+            try {
+                //String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
+                //int pic = res.getIdentifier(imageFile, "raw", getContext().getPackageName());
+                gif = new
+                        GifAnimationDrawable(getResources().openRawResource(pic_id));
+                gif.setOneShot(false);
+                ivGif.setImageDrawable(gif);
+                gif.setVisible(true, true);
+            } catch (Resources.NotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+
+            textView1.setText(res.getStringArray(R.array.page_text_english)[getArguments().getInt(ARG_SECTION_NUMBER)]);
+            textView2.setText(res.getStringArray(R.array.page_text_russian)[getArguments().getInt(ARG_SECTION_NUMBER)]);
+
             return rootView;
         }
     }
@@ -140,18 +209,32 @@ public class StoryPageActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 9;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Page 1";
                 case 1:
-                    return "SECTION 2";
+                    return "Page 2";
                 case 2:
-                    return "SECTION 3";
+                    return "Page 3";
+                case 3:
+                    return "Page 4";
+                case 4:
+                    return "Page 5";
+                case 5:
+                    return "Page 6";
+                case 6:
+                    return "Page 7";
+                case 7:
+                    return "Page 8";
+                case 8:
+                    return "Page 9";
+                case 9:
+                    return "Page 10";
             }
             return null;
         }

@@ -30,7 +30,7 @@
 	$topPart = <<<EOBODY
 	<link href="bootstrap.min.css" rel="stylesheet">
 		<form action="navigating.php" method="post">
-			<input type="submit" name="back_profileSelect" style="width:60px; height:45px;" value="Back to Profiles" /><br />
+			<input type="submit" name="back_profileSelect" style="width:120px; height:45px;" value="Back to Profiles" /><br />
 			<p>&nbsp;</p>
 		</form>	
 		<form action="$scriptName" method="post">

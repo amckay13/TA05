@@ -25,12 +25,12 @@
     }
 	
 	if (isset($_POST["submitInfoButton"])) {
-		$nameValue = trim($_POST["name"]);
-		$passwordValue = trim($_POST["password"]);
+		$nameValue = trim($_POST["User:"]);
+		$passwordValue = trim($_POST["Password:"]);
 		
-		if ($nameValue !== "Mom" || $nameValue === "" || $passwordValue === "" || ($passwordValue !== "readingrocks"))
+		if ($nameValue !== "Mom" || ($passwordValue !== "readingrocks"))
 			header("Location:login.php");
-		if ($body == "") {
+		else {
 			header("Location:settingsMenu.php");
 		}
 	} 

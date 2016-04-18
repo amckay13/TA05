@@ -6,24 +6,36 @@
     </head>
     
     <body>
-        <form action="settingsMenu.php" method="post">
-            <input type="submit" value="Back to Menu" />
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
+                </div>
+                <div class="col-sm-10">
+                    <h1 class="h1">Storybook Store</h1>
+                    <h3 class="h3">Click a Book to Purchase It!</h3>
+                </div>
+            </div>
+        </div>
         
-        <h1>Storybook Store</h1>
-        <h3>Click a story to buy it!</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <a href="confirm.php"><img src="http://lifestyle.inquirer.net/files/2012/05/brklife_1-jack-tvj.jpg" alt="Jack and the Beanstalk" height="200" width="150"></a><br>
+                    <b>Jack and the Beanstalk</b>                    
+                </div>
+                <div class="col-sm-4">
+                    <a href="confirm.php"><img src="http://ecx.images-amazon.com/images/I/61r9CMAgIZL._SX258_BO1,204,203,200_.jpg" alt="Little Red Riding Hood" height="200" width="150"></a><br>
+                    <b>Little Red Riding Hood</b>
+                </div>
+                <div class="col-sm-4">
+                    <a href="confirm.php"><img src="https://lh4.ggpht.com/SWfVV7KhQpsV5XiPmj0TiH_8ylqBxrvKdEFG2x6kvl5FLGVSDazEPjz6fEODZri2EA=w300" alt="Three Little Pigs" height="200" width="150"></a><br>
+                    <b>The Three Little Pigs</b>
+                </div>
+            </div>
+        </div>
         
-        <a href="confirm.php"><img src="http://lifestyle.inquirer.net/files/2012/05/brklife_1-jack-tvj.jpg" alt="Jack and the Beanstalk" height="200" width="150"></a><br>
-        <b>Jack and the Beanstalk</b><br><br>
         
-        <a href="confirm.php"><img src="http://ecx.images-amazon.com/images/I/61r9CMAgIZL._SX258_BO1,204,203,200_.jpg" alt="Little Red Riding Hood" height="200" width="150"></a><br>
-        <b>Little Red Riding Hood</b><br><br>
-        
-        <a href="confirm.php"><img src="https://lh4.ggpht.com/SWfVV7KhQpsV5XiPmj0TiH_8ylqBxrvKdEFG2x6kvl5FLGVSDazEPjz6fEODZri2EA=w300" alt="Three Little Pigs" height="200" width="150"></a><br>
-        <b>The Three Little Pigs</b><br><br>
-        
-        <a href="confirm.php"><img src="http://ecx.images-amazon.com/images/I/61Qtq-ioyiL._SX258_BO1,204,203,200_.jpg" alt="Goldilocks" height="200" width="150"></a><br>
-        <b>Goldilocks</b><br><br>
         
         <script src="js/bootstrap.min.js"></script>
     </body>

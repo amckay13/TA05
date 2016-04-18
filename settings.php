@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
-                    <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Profiles</a>
+                    <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
                 </div>
                 <div class="col-sm-10">
                     <h1 class="h1">Account Settings</h1>

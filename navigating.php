@@ -24,6 +24,10 @@
         header("Location:login.php");
     }
 	
+	if (isset($_POST["profile1"]) || isset($_POST["profile2"])) {
+        header("Location:child.php");
+    }
+	
 	if (isset($_POST["submitInfoButton"])) {
 		$nameValue = trim($_POST["User:"]);
 		$passwordValue = trim($_POST["Password:"]);

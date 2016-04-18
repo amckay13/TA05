@@ -11,7 +11,7 @@
         
         <div class="container text-center">
             <h1 class="h1">Parent Settings Menu</h1>
-        </div>
+        </div><br>
         
         <div class="container text-center">
             <form action="settings.php" method="post">

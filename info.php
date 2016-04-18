@@ -2,7 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Account Info</title>
-        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     
     <body>
@@ -10,7 +10,7 @@
         
         <div class="container text-center">
             <h1 class="h1">Account Information</h1>
-            <h3 class="h3">Current Account: Parent</h3>
+            <p><span class="glyphicon glyphicon-user"></span>Current Account: Parent</p>
         </div>
     
         <div class="container text-center">

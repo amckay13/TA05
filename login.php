@@ -15,17 +15,18 @@
 		<div class="container text-center">
             <h1 class="h1">Login Page</h1>
         </div>
+		<p>&nbsp;</p>
 		
 		<div class="container text-center">
 				<form action="navigating.php" method="post">
 					<p>
 						<strong>Name: </strong><input type="text" name="User:"  />
 					</p>
-					
+					<p>&nbsp;</p>
 					<p>
 						<strong>Password: </strong><input type="password" name="Password:" />
 					</p>
-					
+					<p>&nbsp;</p>
 					<!--We need the submit button-->
 					<p>
 						<input type="submit" class="btn btn-primary" name="submitInfoButton" />

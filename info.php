@@ -6,16 +6,11 @@
     </head>
     
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
-                </div>
-                <div class="col-sm-10">
-                    <h1 class="h1">Account Information</h1>
-                    <h3 class="h3">Current Account: Parent</h3>
-                </div>
-            </div>
+        <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
+        
+        <div class="container text-center">
+            <h1 class="h1">Account Information</h1>
+            <h3 class="h3">Current Account: Parent</h3>
         </div>
     
         <div class="container text-center">

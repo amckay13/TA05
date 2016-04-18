@@ -6,18 +6,13 @@
     </head>
     
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <a class="btn btn-info" href="login.php" role="button">Back to Profiles</a>
-                </div>
-                <div class="col-sm-10">
-                    <h1 class="h1">Parent Settings Menu</h1>
-                </div>
-            </div>
+        <a class="btn btn-info" href="login.php" role="button">Back to Profiles</a>
+        
+        <div class="container text-center">
+            <h1 class="h1">Parent Settings Menu</h1>
         </div>
         
-        <div class="center-block">
+        <div class="container text-center">
             <form action="settings.php" method="post">
                 <input type="submit" value="App Settings" class="btn btn-primary" style="width:300px; height:80px;">
             </form>

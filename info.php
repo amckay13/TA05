@@ -12,16 +12,13 @@
             <h1 class="h1">Account Information</h1>
             <p><span class="glyphicon glyphicon-user"></span>Current Account: Parent</p>
         </div>
-    
-        <div class="container text-center">
-            <p>Date Created: 11/24/15</p>
-            <p>Stories Completed: 57</p>
-            <p>Most Read Story: Jack and the Beanstalk</p>
-            <p>Children Registered:</p>
-            <ul>
-                <li>Anya</li>
-                <li>Brooklyn</li>
-            </ul>
+        <br>
+        
+        <div class="container">
+            <p><b>Date Created:</b> 11/24/15</p>
+            <p><b>Stories Completed:</b> 57</b></p>
+            <p><b>Most Read Story:</b> Jack and the Beanstalk</b></p>
+            <p><b>Children Registered:</b> Anya, Brooklyn</p>
         </div>
         
         <script src="js/bootstrap.min.js"></script>

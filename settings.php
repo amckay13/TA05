@@ -14,7 +14,7 @@
         </div>
         <br>
         
-        <div class="container">
+        <div class="container text-center">
             <form action="confirm.php" method="post">
                 <b>Text Language Control</b><br>
                 <input type="checkbox" name="language" value="English"> English<br>

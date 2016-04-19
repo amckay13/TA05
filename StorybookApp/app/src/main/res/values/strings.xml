@@ -5,28 +5,28 @@
     <string-array
         name="page_text_english">
         <item></item>
-        <item>This is the number ONE. One rabbit waves hello.</item>
-        <item>This is the number TWO. Two rabbits hop.</item>
-        <item>This is the number THREE. Three rabbits hop.</item>
-        <item>This is the number FOUR. Four rabbits hop.</item>
-        <item>This is the number FIVE. Five rabbits hop.</item>
-        <item>This is the number SIX. Six rabbits hop.</item>
-        <item>This is the number SEVEN. Seven rabbits hop.</item>
-        <item>This is the number EIGHT. Eight rabbits hop.</item>
-        <item>This is the number NINE. Nine rabbits hop.</item>
+        <item>ONE lion roars. Roar!</item>
+        <item>TWO cows moo. Moo!</item>
+        <item>THREE sheep bleat. Baa-baa!</item>
+        <item>FOUR ducks quack. Quack!</item>
+        <item>FIVE goats go Mee-mee!</item>
+        <item>SIX frogs croak. Ribbit!</item>
+        <item>SEVEN pigs oink. Oink!</item>
+        <item>EIGHT dogs bark. Bark!</item>
+        <item>NINE cats meow. Meow!</item>
     </string-array>
     <string-array
         name="page_text_russian">
         <item></item>
-        <item>Число ОДИН. Один заяц машет лапой.</item>
-        <item>Число ДВА. Два заяца прыгаяют.</item>
-        <item>Число ТРИ. Три заяца прыгаяют.</item>
-        <item>Число ЧЕТЫРЕ. Четыре заяца прыгаяют.</item>
-        <item>Число ПЯТЬ. Пять заяца прыгаяют.</item>
-        <item>Число ШЕСТЬ. Шесть заяца прыгаяют.</item>
-        <item>Число СЕМЬ. Семь заяца прыгаяют.</item>
-        <item>Число ВОСЕМЬ. Восемь заяца прыгаяют.</item>
-        <item>Число ДЕВЯТЬ. Девять заяца прыгаяют.</item>
+        <item>ОДИН лев рычит.</item>
+        <item>ДВЕ коровы мычат.</item>
+        <item>ТРИ овцы блеют.</item>
+        <item>ЧЕТЫРЕ утки крякают.</item>
+        <item>ПЯТЬ коз мекают.</item>
+        <item>ШЕСТЬ лягушек квакают.</item>
+        <item>СЕМЬ поросят хрюкают.</item>
+        <item>ВОСЕМЬ собак лают.</item>
+        <item>ДЕВЯТЬ кошек мяукают.</item>
     </string-array>
 
     <string-array

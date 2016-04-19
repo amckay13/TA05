@@ -120,10 +120,11 @@ public class StoryPageActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_story_page, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             TextView textView1 = (TextView) rootView.findViewById(R.id.section_text1);
             TextView textView2 = (TextView) rootView.findViewById(R.id.section_text2);
+            TextView textNum = (TextView)rootView.findViewById(R.id.section_number);
             Resources res = getResources();
 
             ImageView ivGif = (ImageView) rootView.findViewById(R.id.section_image);
@@ -135,7 +136,7 @@ public class StoryPageActivity extends AppCompatActivity {
             //imageView.setImageResource(pic);
             GifAnimationDrawable gif;
             int pic_id = 0;
-            switch(getArguments().getInt(ARG_SECTION_NUMBER)){
+           /* switch(getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
                     pic_id = R.raw.bunny1;
                     break;
@@ -164,8 +165,38 @@ public class StoryPageActivity extends AppCompatActivity {
                     pic_id = R.raw.bunny9;
                     break;
             }
+            */
+            switch(getArguments().getInt(ARG_SECTION_NUMBER)){
+            case 1:
+            pic_id = R.drawable.lion1;
+            break;
+            case 2:
+            pic_id = R.drawable.cow2;
+            break;
+            case 3:
+            pic_id = R.drawable.sheep3;
+            break;
+            case 4:
+            pic_id = R.drawable.duck4;
+            break;
+            case 5:
+            pic_id = R.drawable.goat5;
+            break;
+            case 6:
+            pic_id = R.drawable.frog6;
+            break;
+            case 7:
+            pic_id = R.drawable.pig7;
+            break;
+            case 8:
+            pic_id = R.drawable.dog8;
+            break;
+            case 9:
+            pic_id = R.drawable.cat9;
+            break;
+        }
 
-            try {
+            /*try {
                 //String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
                 //int pic = res.getIdentifier(imageFile, "raw", getContext().getPackageName());
                 gif = new
@@ -177,11 +208,12 @@ public class StoryPageActivity extends AppCompatActivity {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }*/
+            ivGif.setImageDrawable(getResources().getDrawable(pic_id));
 
             textView1.setText(res.getStringArray(R.array.page_text_english)[getArguments().getInt(ARG_SECTION_NUMBER)]);
             textView2.setText(res.getStringArray(R.array.page_text_russian)[getArguments().getInt(ARG_SECTION_NUMBER)]);
-
+            textNum.setText(""+getArguments().getInt(ARG_SECTION_NUMBER));
             return rootView;
         }
     }

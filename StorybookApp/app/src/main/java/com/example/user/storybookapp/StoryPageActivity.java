@@ -121,7 +121,7 @@ public class StoryPageActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_story_page, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, 1+getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             TextView textView1 = (TextView) rootView.findViewById(R.id.section_text1);
             TextView textView2 = (TextView) rootView.findViewById(R.id.section_text2);
             Resources res = getResources();
@@ -136,31 +136,31 @@ public class StoryPageActivity extends AppCompatActivity {
             GifAnimationDrawable gif;
             int pic_id = 0;
             switch(getArguments().getInt(ARG_SECTION_NUMBER)){
-                case 0:
+                case 1:
                     pic_id = R.raw.bunny1;
                     break;
-                case 1:
+                case 2:
                     pic_id = R.raw.bunny2;
                     break;
-                case 2:
+                case 3:
                     pic_id = R.raw.bunny3;
                     break;
-                case 3:
+                case 4:
                     pic_id = R.raw.bunny4;
                     break;
-                case 4:
+                case 5:
                     pic_id = R.raw.bunny5;
                     break;
-                case 5:
+                case 6:
                     pic_id = R.raw.bunny6;
                     break;
-                case 6:
+                case 7:
                     pic_id = R.raw.bunny7;
                     break;
-                case 7:
+                case 8:
                     pic_id = R.raw.bunny8;
                     break;
-                case 8:
+                case 9:
                     pic_id = R.raw.bunny9;
                     break;
             }
@@ -178,9 +178,6 @@ public class StoryPageActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
-
 
             textView1.setText(res.getStringArray(R.array.page_text_english)[getArguments().getInt(ARG_SECTION_NUMBER)]);
             textView2.setText(res.getStringArray(R.array.page_text_russian)[getArguments().getInt(ARG_SECTION_NUMBER)]);

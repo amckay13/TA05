@@ -4,6 +4,7 @@
     <string name="section_format">Page %1$d</string>
     <string-array
         name="page_text_english">
+        <item></item>
         <item>This is the number ONE. One rabbit waves hello.</item>
         <item>This is the number TWO. Two rabbits hop.</item>
         <item>This is the number THREE. Three rabbits hop.</item>
@@ -16,6 +17,7 @@
     </string-array>
     <string-array
         name="page_text_russian">
+        <item></item>
         <item>Число ОДИН. Один заяц машет лапой.</item>
         <item>Число ДВА. Два заяца прыгаяют.</item>
         <item>Число ТРИ. Три заяца прыгаяют.</item>
@@ -29,6 +31,7 @@
 
     <string-array
         name="page_image_files">
+        <item></item>
         <item>bunny1.gif</item>
         <item>bunny2.gif</item>
         <item>bunny3.gif</item>

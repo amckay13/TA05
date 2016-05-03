@@ -30,7 +30,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book 2"
+        android:text="Shapes and Colors"
         android:id="@+id/book2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />

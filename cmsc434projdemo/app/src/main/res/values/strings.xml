@@ -57,4 +57,54 @@
         <item>cat9.jpg</item>
     </string-array>
 
+    <string-array
+        name="shapes_english">
+        <item></item>
+        <item>The Circle is red.</item>
+        <item>The Square is orange.</item>
+        <item>The Triangle is yellow.</item>
+        <item>The Rectangle is green.</item>
+        <item>The Oval is blue.</item>
+        <item>The Diamond is purple.</item>
+        <item>The Star is pink. </item>
+        <item>The world is full of colors! What's your favorite?</item>
+    </string-array>
+    <string-array
+        name="shapes_russian">
+        <item></item>
+        <item>Круг красный.</item>
+        <item>Площадь оранжевый.</item>
+        <item>Треугольник желтого цвета.</item>
+        <item>Прямоугольник зеленого цвета.</item>
+        <item>Овальный синий.</item>
+        <item>Алмаз фиолетовый.</item>
+        <item>Звезда розового цвета.</item>
+        <item>Мир полон красок! Какой твой любимый?</item>
+    </string-array>
+
+    <string-array
+        name="shapes_spanish">
+        <item></item>
+        <item>El círculo es rojo .</item>
+        <item>El cuadro es naranjo.</item>
+        <item>El triángulo es amarillo</item>
+        <item>El rectángulo es verde.</item>
+        <item>El óvalo es azul.</item>
+        <item>El diamonte es morado.</item>
+        <item>La estrella es rosa.</item>
+        <item>¡El mundo está lleno de colores! ¿Cual es tu favorito?</item>
+    </string-array>
+
+    <string-array
+        name="shapes_files">
+        <item></item>
+        <item>redcircle.jpg</item>
+        <item>square.jpg</item>
+        <item>triangle.jpg</item>
+        <item>rectangle.jpg</item>
+        <item>oval.png</item>
+        <item>diamond.jpg</item>
+        <item>star.jpg</item>
+        <item>rainbow.jpg</item>
+    </string-array>
 </resources>

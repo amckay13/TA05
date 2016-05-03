@@ -1,22 +1,22 @@
 <resources>
-    <string name="app_name">StorybookApp</string>
+    <string name="app_name">Storybook</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Page %1$d</string>
     <string-array
-        name="page_text_english">
+        name="animals_english">
         <item></item>
         <item>ONE lion roars. Roar!</item>
         <item>TWO cows moo. Moo!</item>
-        <item>THREE sheep bleat. Baa-baa!</item>
+        <item>THREE sheep bleat. Baa!</item>
         <item>FOUR ducks quack. Quack!</item>
-        <item>FIVE goats go Mee-mee!</item>
+        <item>FIVE goats go Mee!</item>
         <item>SIX frogs croak. Ribbit!</item>
         <item>SEVEN pigs oink. Oink!</item>
         <item>EIGHT dogs bark. Bark!</item>
         <item>NINE cats meow. Meow!</item>
     </string-array>
     <string-array
-        name="page_text_russian">
+        name="animals_russian">
         <item></item>
         <item>ОДИН лев рычит.</item>
         <item>ДВЕ коровы мычат.</item>
@@ -30,17 +30,31 @@
     </string-array>
 
     <string-array
-        name="page_image_files">
+        name="animals_spanish">
         <item></item>
-        <item>bunny1.gif</item>
-        <item>bunny2.gif</item>
-        <item>bunny3.gif</item>
-        <item>bunny4.gif</item>
-        <item>bunny5.gif</item>
-        <item>bunny6.gif</item>
-        <item>bunny7.gif</item>
-        <item>bunny8.gif</item>
-        <item>bunny9.gif</item>
+        <item>UN león ruge. Grrr!</item>
+        <item>DOS vacas mugen. Muu!</item>
+        <item>TRES ovejas balan. Bee!</item>
+        <item>CUATRO patos hace cuac. Cuac!</item>
+        <item>CINCO cabras balan. Bee!</item>
+        <item>SEIS ranas croan. Cruá!</item>
+        <item>SIETE cerdos gruñen. Oink!</item>
+        <item>OCHO perros ladran. Guau! </item>
+        <item>NUEVE gatos maullan. Miau!</item>
+    </string-array>
+
+    <string-array
+        name="animals_files">
+        <item></item>
+        <item>lion1.jpg</item>
+        <item>cow2.jpg</item>
+        <item>sheep3.jpg</item>
+        <item>duck4.jpg</item>
+        <item>goat5.jpg</item>
+        <item>frog6.jpg</item>
+        <item>pig7.jpg</item>
+        <item>dog8.jpg</item>
+        <item>cat9.jpg</item>
     </string-array>
 
 </resources>

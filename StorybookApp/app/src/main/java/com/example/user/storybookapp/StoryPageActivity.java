@@ -1,7 +1,10 @@
 package com.example.user.storybookapp;
 
+import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.os.Build;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +24,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class StoryPageActivity extends AppCompatActivity {
 
@@ -34,6 +38,21 @@ public class StoryPageActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    static Locale loc1;
+    static Locale loc2;
+
+    static final Locale spa = new Locale("spa", "MEX");
+    static final Locale rus = new Locale("rus", "RUS");
+    static final Locale fra = Locale.FRENCH;
+    static final Locale eng = Locale.US;
+
+    static TextToSpeech t1;
+    static TextToSpeech t2;
+
+    static String text1;
+    static String text2;
+
+
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -52,19 +71,98 @@ public class StoryPageActivity extends AppCompatActivity {
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+
+            public void onPageSelected(int position) {
+                setText(getResources(),position+1);
+            }
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    t1.setLanguage(loc1);
+                }
+            }
+        });
+
+        t2 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    t1.setLanguage(loc2);
+                }
+            }
+        });
+
+        loc1 = eng;
+        loc2 = rus;
+
+        setText(getResources(),1);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //         .setAction("Action", null).show();
+                speakOut(view.getRootView());
             }
         });
+    }
+
+    private static void setText(Resources res, int position){
+        if (loc1.getLanguage().equals(rus.getLanguage())) {
+            text1 = res.getStringArray(R.array.animals_russian)[position];
+        } else if (loc1.getLanguage().equals(spa.getLanguage())) {
+            text1 = res.getStringArray(R.array.animals_spanish)[position];
+        } else {
+            text1 = res.getStringArray(R.array.animals_english)[position];
+        }
+
+        if (loc2.getLanguage().equals(rus.getLanguage())) {
+            text2 = res.getStringArray(R.array.animals_russian)[position];
+        } else if (loc2.getLanguage().equals(spa.getLanguage())) {
+            text2 = res.getStringArray(R.array.animals_spanish)[position];
+        } else {
+            text2 = res.getStringArray(R.array.animals_english)[position];
+        }
+    }
+
+    private static void speakOut(View rootView) {
+
+        // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        //         .setAction("Action", null).show();
+
+       // String text1 = ((TextView) rootView.findViewById(R.id.section_text1)).getText().toString();
+       // String text2 = ((TextView) rootView.findViewById(R.id.section_text2)).getText().toString();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            String utteranceId = t1.hashCode() + "";
+            t2.speak(text1, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+            String utteranceId2 = t2.hashCode() + "";
+            t1.speak(text2, TextToSpeech.QUEUE_FLUSH, null, utteranceId2);
+        } else {
+            HashMap<String, String> map = new HashMap<>();
+            map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
+            t2.speak(text1, TextToSpeech.QUEUE_FLUSH, map);
+            t1.speak(text2, TextToSpeech.QUEUE_FLUSH, map);
+        }
+
 
     }
 
@@ -90,6 +188,7 @@ public class StoryPageActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
     /**
      * A placeholder fragment containing a simple view.
@@ -124,7 +223,7 @@ public class StoryPageActivity extends AppCompatActivity {
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             TextView textView1 = (TextView) rootView.findViewById(R.id.section_text1);
             TextView textView2 = (TextView) rootView.findViewById(R.id.section_text2);
-            TextView textNum = (TextView)rootView.findViewById(R.id.section_number);
+            TextView textNum = (TextView) rootView.findViewById(R.id.section_number);
             Resources res = getResources();
 
             ImageView ivGif = (ImageView) rootView.findViewById(R.id.section_image);
@@ -136,65 +235,49 @@ public class StoryPageActivity extends AppCompatActivity {
             //imageView.setImageResource(pic);
             GifAnimationDrawable gif;
             int pic_id = 0;
-           /* switch(getArguments().getInt(ARG_SECTION_NUMBER)){
+            int sound_id = 0;
+
+
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
-                    pic_id = R.raw.bunny1;
+                    pic_id = R.drawable.lion1;
+                    sound_id = R.raw.lion;
                     break;
                 case 2:
-                    pic_id = R.raw.bunny2;
+                    pic_id = R.drawable.cow2;
+                    sound_id = R.raw.cow;
                     break;
                 case 3:
-                    pic_id = R.raw.bunny3;
+                    pic_id = R.drawable.sheep3;
+                    sound_id = R.raw.sheep;
                     break;
                 case 4:
-                    pic_id = R.raw.bunny4;
+                    pic_id = R.drawable.duck4;
+                    sound_id = R.raw.duck;
                     break;
                 case 5:
-                    pic_id = R.raw.bunny5;
+                    pic_id = R.drawable.goat5;
+                    sound_id = R.raw.goat;
                     break;
                 case 6:
-                    pic_id = R.raw.bunny6;
+                    pic_id = R.drawable.frog6;
+                    sound_id = R.raw.frog;
                     break;
                 case 7:
-                    pic_id = R.raw.bunny7;
+                    pic_id = R.drawable.pig7;
+                    sound_id = R.raw.pig;
                     break;
                 case 8:
-                    pic_id = R.raw.bunny8;
+                    pic_id = R.drawable.dog8;
+                    sound_id = R.raw.dog;
                     break;
                 case 9:
-                    pic_id = R.raw.bunny9;
+                    pic_id = R.drawable.cat9;
+                    sound_id = R.raw.cat;
                     break;
             }
-            */
-            switch(getArguments().getInt(ARG_SECTION_NUMBER)){
-            case 1:
-            pic_id = R.drawable.lion1;
-            break;
-            case 2:
-            pic_id = R.drawable.cow2;
-            break;
-            case 3:
-            pic_id = R.drawable.sheep3;
-            break;
-            case 4:
-            pic_id = R.drawable.duck4;
-            break;
-            case 5:
-            pic_id = R.drawable.goat5;
-            break;
-            case 6:
-            pic_id = R.drawable.frog6;
-            break;
-            case 7:
-            pic_id = R.drawable.pig7;
-            break;
-            case 8:
-            pic_id = R.drawable.dog8;
-            break;
-            case 9:
-            pic_id = R.drawable.cat9;
-            break;
-        }
+
+
 
             /*try {
                 //String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
@@ -210,62 +293,72 @@ public class StoryPageActivity extends AppCompatActivity {
                 e.printStackTrace();
             }*/
             ivGif.setImageDrawable(getResources().getDrawable(pic_id));
+            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
 
-            textView1.setText(res.getStringArray(R.array.page_text_english)[getArguments().getInt(ARG_SECTION_NUMBER)]);
-            textView2.setText(res.getStringArray(R.array.page_text_russian)[getArguments().getInt(ARG_SECTION_NUMBER)]);
-            textNum.setText(""+getArguments().getInt(ARG_SECTION_NUMBER));
+            ivGif.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mp.start();
+                }
+            });
+
+            String text1 ="";
+            String text2 ="";
+
+            if (loc1.getLanguage().equals(rus.getLanguage())) {
+                text1 = res.getStringArray(R.array.animals_russian)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            } else if (loc1.getLanguage().equals(spa.getLanguage())) {
+                text1 = res.getStringArray(R.array.animals_spanish)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            } else {
+                text1 = res.getStringArray(R.array.animals_english)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            }
+
+            if (loc2.getLanguage().equals(rus.getLanguage())) {
+                text2 = res.getStringArray(R.array.animals_russian)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            } else if (loc2.getLanguage().equals(spa.getLanguage())) {
+                text2 = res.getStringArray(R.array.animals_spanish)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            } else {
+                text2 = res.getStringArray(R.array.animals_english)[getArguments().getInt(ARG_SECTION_NUMBER)];
+            }
+
+            textView1.setText(text1);
+            textView2.setText(text2);
+
+
+            textNum.setText("" + getArguments().getInt(ARG_SECTION_NUMBER));
+
+
             return rootView;
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        /**
+         * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+         * one of the sections/tabs/pages.
+         */
+        public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
-        }
-
-        @Override
-        public int getCount() {
-            // Show 3 total pages.
-            return 9;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Page 1";
-                case 1:
-                    return "Page 2";
-                case 2:
-                    return "Page 3";
-                case 3:
-                    return "Page 4";
-                case 4:
-                    return "Page 5";
-                case 5:
-                    return "Page 6";
-                case 6:
-                    return "Page 7";
-                case 7:
-                    return "Page 8";
-                case 8:
-                    return "Page 9";
-                case 9:
-                    return "Page 10";
+            public SectionsPagerAdapter(FragmentManager fm) {
+                super(fm);
             }
-            return null;
+
+            @Override
+            public Fragment getItem(int position) {
+                // getItem is called to instantiate the fragment for the given page.
+                // Return a PlaceholderFragment (defined as a static inner class below).
+                return PlaceholderFragment.newInstance(position + 1);
+            }
+
+            @Override
+            public int getCount() {
+                // Show 3 total pages.
+                return 9;
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return "Page " + (position + 1);
+            }
         }
     }
-}
+

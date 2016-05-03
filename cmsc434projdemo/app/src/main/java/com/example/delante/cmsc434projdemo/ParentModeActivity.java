@@ -25,13 +25,13 @@ public class ParentModeActivity extends AppCompatActivity {
             }
         });
 
-        /*storeButton.setOnClickListener(new View.OnClickListener() {
+        storeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ParentModeActivity.this, ParentStoreActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override

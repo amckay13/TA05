@@ -14,30 +14,75 @@
         android:layout_marginBottom="30px"
         android:layout_marginTop="30px"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.22">
-
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.07"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center">
 
         <ImageView
+            android:layout_width="200px"
+            android:layout_height="300px"
+            android:id="@+id/imageView"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="buyBeanstalk"/>
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="300px"
+            android:id="@+id/imageView2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="buyLittleRed"/>
+
+        <ImageView
+            android:layout_width="200px"
+            android:layout_height="300px"
+            android:id="@+id/imageView3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="buyThreeBears"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView3" />
-    </LinearLayout>
+            android:text="Beanstalk"
+            android:id="@+id/textView20"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
-    <ImageView
-        android:layout_width="100px"
-        android:layout_height="100px"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-    </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Little Red"
+            android:id="@+id/textView21"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Bears"
+            android:id="@+id/textView22"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </GridLayout>
+
+
 </LinearLayout>

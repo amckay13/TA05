@@ -21,7 +21,7 @@ public class ProfileSelectAcivityReal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    Intent intent = new Intent(ProfileSelectAcivityReal.this,ChildPlayModeActivity.class);
+                    Intent intent = new Intent(ProfileSelectAcivityReal.this,StoryPickerPageActivity.class);
                     startActivity(intent);
                 }
         });
@@ -30,7 +30,7 @@ public class ProfileSelectAcivityReal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ProfileSelectAcivityReal.this,ChildPlayModeActivity.class);
+                Intent intent = new Intent(ProfileSelectAcivityReal.this,StoryPickerPageActivity.class);
                 startActivity(intent);
             }
         });

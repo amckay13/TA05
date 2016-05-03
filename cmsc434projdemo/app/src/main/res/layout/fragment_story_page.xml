@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.user.storybookapp.StoryPageActivity$PlaceholderFragment"
+    >
+
+  <!--  <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/small_font_size"/>-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.user.storybookapp.StoryPageActivity$PlaceholderFragment"
+        android:gravity="center">
+      <TextView
+          android:id="@+id/section_text1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/med_font_size"/>
+
+      <TextView
+          android:id="@+id/section_text2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/med_font_size"
+          android:textColor="@color/colorAccent2"/>
+    <TextView
+        android:id="@+id/section_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/large_font_size"/>
+
+    </LinearLayout>
+
+  <ImageView
+      android:id="@+id/section_image"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:adjustViewBounds="true"
+      android:scaleType="fitCenter" />
+
+</LinearLayout>

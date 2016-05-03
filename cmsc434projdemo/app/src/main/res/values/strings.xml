@@ -1,3 +1,60 @@
 <resources>
-    <string name="app_name">cmsc434projdemo</string>
+    <string name="app_name">Storybook</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Page %1$d</string>
+    <string-array
+        name="animals_english">
+        <item></item>
+        <item>ONE lion roars. Roar!</item>
+        <item>TWO cows moo. Moo!</item>
+        <item>THREE sheep bleat. Baa!</item>
+        <item>FOUR ducks quack. Quack!</item>
+        <item>FIVE goats go Mee!</item>
+        <item>SIX frogs croak. Ribbit!</item>
+        <item>SEVEN pigs oink. Oink!</item>
+        <item>EIGHT dogs bark. Bark!</item>
+        <item>NINE cats meow. Meow!</item>
+    </string-array>
+    <string-array
+        name="animals_russian">
+        <item></item>
+        <item>ОДИН лев рычит.</item>
+        <item>ДВЕ коровы мычат.</item>
+        <item>ТРИ овцы блеют.</item>
+        <item>ЧЕТЫРЕ утки крякают.</item>
+        <item>ПЯТЬ коз мекают.</item>
+        <item>ШЕСТЬ лягушек квакают.</item>
+        <item>СЕМЬ поросят хрюкают.</item>
+        <item>ВОСЕМЬ собак лают.</item>
+        <item>ДЕВЯТЬ кошек мяукают.</item>
+    </string-array>
+
+    <string-array
+        name="animals_spanish">
+        <item></item>
+        <item>UN león ruge. Grrr!</item>
+        <item>DOS vacas mugen. Muu!</item>
+        <item>TRES ovejas balan. Bee!</item>
+        <item>CUATRO patos hace cuac. Cuac!</item>
+        <item>CINCO cabras balan. Bee!</item>
+        <item>SEIS ranas croan. Cruá!</item>
+        <item>SIETE cerdos gruñen. Oink!</item>
+        <item>OCHO perros ladran. Guau! </item>
+        <item>NUEVE gatos maullan. Miau!</item>
+    </string-array>
+
+    <string-array
+        name="animals_files">
+        <item></item>
+        <item>lion1.jpg</item>
+        <item>cow2.jpg</item>
+        <item>sheep3.jpg</item>
+        <item>duck4.jpg</item>
+        <item>goat5.jpg</item>
+        <item>frog6.jpg</item>
+        <item>pig7.jpg</item>
+        <item>dog8.jpg</item>
+        <item>cat9.jpg</item>
+    </string-array>
+
 </resources>

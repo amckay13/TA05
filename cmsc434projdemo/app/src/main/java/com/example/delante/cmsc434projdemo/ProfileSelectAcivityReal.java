@@ -39,7 +39,7 @@ public class ProfileSelectAcivityReal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ProfileSelectAcivityReal.this, ParentModeActivity.class);
+                Intent intent = new Intent(ProfileSelectAcivityReal.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

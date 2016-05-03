@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(userAccounts.containsKey(user) && userAccounts.get(user).equals(pass)){
                     Toast.makeText(getApplicationContext(),"Login Successful!",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this,ProfileSelectAcivityReal.class);
+                    Intent intent = new Intent(LoginActivity.this, ParentModeActivity.class);
                     startActivity(intent);
                 }
                 else{

@@ -47,6 +47,13 @@ public class StoryPageActivity extends AppCompatActivity {
 
     static String text1;
     static String text2;
+    
+    public static void setLoc2(String s) {
+        if (s.equals("r"))
+            loc2 = rus;
+        if(s.equals("s"))
+            loc2 = spa;
+    }
 
 
 
@@ -106,7 +113,11 @@ public class StoryPageActivity extends AppCompatActivity {
         });
 
         loc1 = eng;
-        loc2 = rus;
+       //if the settings weren't manually changed, story1 default is russian
+        if (loc2 == null) {
+            loc2 = rus;
+        }
+
 
         setText(getResources(),1);
 
@@ -178,9 +189,12 @@ public class StoryPageActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        /* if (id == R.id.spanish) {
+            loc2 = spa;
         }
+        if (id == R.id.russian) {
+            loc2 = rus;
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

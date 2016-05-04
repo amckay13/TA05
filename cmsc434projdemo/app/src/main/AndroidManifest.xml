@@ -62,6 +62,11 @@
             android:name=".ParentStoreActivity">
         </activity>
 
+        <activity
+            android:name=".Story2PageActivity">
+        </activity>
+
+
         <uses-permission android:name="android.permission.INTERNET" />
     </application>
 

@@ -67,7 +67,7 @@
         <item>The Oval is blue.</item>
         <item>The Diamond is purple.</item>
         <item>The Star is pink. </item>
-        <item>The world is full of colors! What's your favorite?</item>
+        <item>The world is full of colors! What\'s your favorite?</item>
     </string-array>
     <string-array
         name="shapes_russian">

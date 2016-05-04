@@ -189,8 +189,12 @@ public class StoryPageRemoteActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        //has a delayed result
+         if (id == R.id.spanish) {
+            loc2 = spa;
+        }
+        if (id == R.id.russian) {
+            loc2 = rus;
         }
 
         return super.onOptionsItemSelected(item);

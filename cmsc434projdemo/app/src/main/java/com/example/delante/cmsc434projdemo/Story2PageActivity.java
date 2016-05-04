@@ -64,8 +64,7 @@ public class Story2PageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story_page);
 
         //gifView = (GIFView) findViewById(R.id.section_gif);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -278,14 +277,14 @@ public class Story2PageActivity extends AppCompatActivity {
                 e.printStackTrace();
             }*/
             ivGif.setImageDrawable(getResources().getDrawable(pic_id));
-            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
+/*            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
 
             ivGif.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mp.start();
                 }
-            });
+            });*/
 
             String text1 ="";
             String text2 ="";

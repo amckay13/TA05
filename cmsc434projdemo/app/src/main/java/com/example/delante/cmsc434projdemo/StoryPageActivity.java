@@ -61,8 +61,8 @@ public class StoryPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story_page);
 
         //gifView = (GIFView) findViewById(R.id.section_gif);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());

@@ -15,7 +15,9 @@ public class StoryPickerPageActivity extends AppCompatActivity {
 
         final Button story1 = (Button) findViewById(R.id.book1);
         final Button story2 = (Button) findViewById(R.id.book2);
-       // final Button buttonSolo = (Button) findViewById(R.id.parentButton);
+        final Button remoteStory1 = (Button) findViewById(R.id.animalStoryRemoteMode);
+
+        // final Button buttonSolo = (Button) findViewById(R.id.parentButton);
 
         story1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +33,15 @@ public class StoryPickerPageActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(StoryPickerPageActivity.this,Story2PageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        remoteStory1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(StoryPickerPageActivity.this,StoryPageActivityRemote.class);
                 startActivity(intent);
             }
         });

@@ -7,14 +7,26 @@
     </head>
     
     <body>
-        <a class="btn btn-info" href="settingsMenu.php" role="button">Back to Menu</a>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="#">Storybook Dashboard</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="settings.php">App Settings</a></li>
+                    <li><a href="store.php">Bookstore</a></li>
+                    <li><a href="info.php">Account Info</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="login.php">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
         
-        <div class="container text-center">
+        <div class="container">
             <h1 class="h1">Account Settings</h1>
         </div>
         <br>
         
-        <div class="container text-center">
+        <div class="container">
             <form action="confirm.php" method="post">
                 <b>Text Language Control</b><br>
                 <input type="checkbox" name="language" value="English"> English<br>

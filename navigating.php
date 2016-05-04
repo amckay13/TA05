@@ -32,10 +32,10 @@
 		$nameValue = trim($_POST["User:"]);
 		$passwordValue = trim($_POST["Password:"]);
 		
-		if ($nameValue !== "Mom" || ($passwordValue !== "readingrocks"))
+		if ($nameValue !== "Parent" || ($passwordValue !== "password"))
 			header("Location:login.php");
 		else {
-			header("Location:settingsMenu.php");
+			header("Location:settings.php");
 		}
 	} 
 ?>

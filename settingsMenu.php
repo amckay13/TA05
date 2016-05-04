@@ -7,12 +7,25 @@
     </head>
     
     <body>
-        <a class="btn btn-info" href="login.php" role="button">Logout</a>
+        
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="#">Storybook Dashboard</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="settings.php">App Settings</a></li>
+                    <li><a href="store.php">Bookstore</a></li>
+                    <li><a href="info.php">Account Info</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="login.php">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
         
         <div class="container text-center">
             <h1 class="h1">Parent Settings Menu</h1>
         </div><br>
-        
+            
         <div class="container text-center">
             <form action="settings.php" method="post">
                 <input type="submit" value="App Settings" class="btn btn-primary" style="width:300px; height:80px;">

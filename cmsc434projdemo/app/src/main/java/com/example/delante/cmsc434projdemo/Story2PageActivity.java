@@ -276,7 +276,7 @@ public class Story2PageActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }*/
-<<<<<<< HEAD
+
             ivGif.setImageDrawable(getResources().getDrawable(pic_id));
 /*            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
 =======

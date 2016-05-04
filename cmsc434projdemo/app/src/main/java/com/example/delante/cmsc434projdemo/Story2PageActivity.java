@@ -234,7 +234,7 @@ public class Story2PageActivity extends AppCompatActivity {
             //imageView.setImageResource(pic);
             // GifAnimationDrawable gif;
             int pic_id = 0;
-            int sound_id = 0;
+            //int sound_id = 0;
 
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
@@ -277,15 +277,15 @@ public class Story2PageActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }*/
-            ivGif.setImageDrawable(getResources().getDrawable(pic_id));
-            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
+           // ivGif.setImageDrawable(getResources().getDrawable(pic_id));
+            //final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
 
-            ivGif.setOnClickListener(new View.OnClickListener() {
+            /*ivGif.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mp.start();
                 }
-            });
+            });*/
 
             String text1 ="";
             String text2 ="";
@@ -337,7 +337,7 @@ public class Story2PageActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 9;
+            return 8;
         }
 
         @Override

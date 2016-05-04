@@ -18,23 +18,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Text Language Control"
+        android:text="Secondary Text Language Control"
         android:id="@+id/textView7"
         android:textStyle="bold"/>
 
-    <CheckBox
+    <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="English"
-        android:id="@+id/checkBox"
-        android:checked="true" />
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Russian"
+            android:id="@+id/russian"
+            android:onClick="onRadioButtonClicked"
+            android:checked="false" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Russian"
-        android:id="@+id/checkBox2"
-        android:checked="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spanish"
+            android:id="@+id/spanish"
+            android:onClick="onRadioButtonClicked"
+            android:checked="false" />
+    </RadioGroup>
 
     <CheckBox
         android:layout_width="wrap_content"

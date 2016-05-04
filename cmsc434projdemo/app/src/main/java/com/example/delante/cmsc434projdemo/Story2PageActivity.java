@@ -5,6 +5,8 @@ package com.example.delante.cmsc434projdemo;
  */
 import android.content.res.Resources;
 import android.media.MediaPlayer;
+import android.content.Intent;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -22,12 +24,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Locale;
 
 public class Story2PageActivity extends AppCompatActivity {
-
+    public Locale l3;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -51,7 +54,12 @@ public class Story2PageActivity extends AppCompatActivity {
     static String text1;
     static String text2;
 
-
+    public static void setLoc2(String s) {
+        if (s.equals("r"))
+            loc2 = rus;
+        if(s.equals("s"))
+            loc2 = spa;
+    }
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -62,8 +70,16 @@ public class Story2PageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_page);
+        //if the settings weren't manually changed, story2 default is spanish
+        if (loc2 == null) {
+            loc2 = spa;
+        }
+        //loc2 = spa;
 
         //gifView = (GIFView) findViewById(R.id.section_gif);
+
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -108,7 +124,7 @@ public class Story2PageActivity extends AppCompatActivity {
         });
 
         loc1 = eng;
-        loc2 = rus;
+        //loc2 = spa;
 
         setText(getResources(),1);
 
@@ -116,8 +132,6 @@ public class Story2PageActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                //         .setAction("Action", null).show();
                 speakOut(view.getRootView());
             }
         });
@@ -143,11 +157,6 @@ public class Story2PageActivity extends AppCompatActivity {
 
     private static void speakOut(View rootView) {
 
-        // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //         .setAction("Action", null).show();
-
-        // String text1 = ((TextView) rootView.findViewById(R.id.section_text1)).getText().toString();
-        // String text2 = ((TextView) rootView.findViewById(R.id.section_text2)).getText().toString();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             String utteranceId = t1.hashCode() + "";
@@ -180,9 +189,12 @@ public class Story2PageActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+       /* if (id == R.id.spanish) {
+            loc2 = spa;
         }
+        if (id == R.id.russian) {
+            loc2 = rus;
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -226,42 +238,47 @@ public class Story2PageActivity extends AppCompatActivity {
 
             ImageView ivGif = (ImageView) rootView.findViewById(R.id.section_image);
 
-           /* GIFView gifView= (GIFView)rootView.findViewById(R.id.section_gif);
+            /*GIFView gifView= (GIFView)rootView.findViewById(R.id.section_gif);
             String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
             int pic = res.getIdentifier(imageFile, "raw", getContext().getPackageName());
-            gifView.setGIF(pic);*/
-            //imageView.setImageResource(pic);
-            // GifAnimationDrawable gif;
+            gifView.setGIF(pic);
+            imageView.setImageResource(pic);
+            GifAnimationDrawable gif;*/
             int pic_id = 0;
             //int sound_id = 0;
 
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
-                    pic_id = R.drawable.redcircle;
+                    pic_id = R.drawable.red;
                     break;
                 case 2:
-                    pic_id = R.drawable.square;
+                    pic_id = R.drawable.orange;
                     break;
                 case 3:
-                    pic_id = R.drawable.triangle;
+                    pic_id = R.drawable.yellow;
                     break;
                 case 4:
-                    pic_id = R.drawable.rectangle;
+                    pic_id = R.drawable.green;
                     break;
                 case 5:
-                    pic_id = R.drawable.oval;
+                    pic_id = R.drawable.blue;
                     break;
                 case 6:
-                    pic_id = R.drawable.diamond;
+                    pic_id = R.drawable.purple;
                     break;
                 case 7:
-                    pic_id = R.drawable.star;
+                    pic_id = R.drawable.pink;
                     break;
                 case 8:
-                    pic_id = R.drawable.rainbow;
+                    //do nothing //pic_id = R.drawable.color;
                     break;
             }
+
+
+
+           ivGif.setImageDrawable(getResources().getDrawable(pic_id));
+
 
             /*try {
                 //String imageFile = res.getStringArray(R.array.page_image_files)[getArguments().getInt(ARG_SECTION_NUMBER)];
@@ -314,7 +331,7 @@ public class Story2PageActivity extends AppCompatActivity {
             textView2.setText(text2);
 
 
-            textNum.setText("" + getArguments().getInt(ARG_SECTION_NUMBER));
+            //textNum.setText("" + getArguments().getInt(ARG_SECTION_NUMBER));
 
 
             return rootView;

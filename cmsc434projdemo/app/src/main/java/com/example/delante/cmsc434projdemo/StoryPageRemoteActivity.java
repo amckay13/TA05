@@ -25,7 +25,7 @@ import android.widget.VideoView;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class StoryPageActivityRemote extends AppCompatActivity {
+public class StoryPageRemoteActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

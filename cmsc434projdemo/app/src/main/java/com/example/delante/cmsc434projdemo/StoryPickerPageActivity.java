@@ -41,7 +41,7 @@ public class StoryPickerPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(StoryPickerPageActivity.this,StoryPageActivityRemote.class);
+                Intent intent = new Intent(StoryPickerPageActivity.this,StoryPageRemoteActivity.class);
                 startActivity(intent);
             }
         });

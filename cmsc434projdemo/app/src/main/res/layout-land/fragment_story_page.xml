@@ -45,15 +45,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/large_font_size"/>
-      <ImageView
-          android:id="@+id/section_image"
-          android:layout_width="fill_parent"
-          android:layout_height="fill_parent"
-          android:adjustViewBounds="true"
-          android:scaleType="fitCenter" />
+
 
     </LinearLayout>
-
+  <ImageView
+      android:id="@+id/section_image"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:adjustViewBounds="true"
+      android:scaleType="fitCenter" />
 
 
 </LinearLayout>

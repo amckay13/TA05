@@ -21,7 +21,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Child 1"
+        android:text="John"
         android:id="@+id/childButton1"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
@@ -30,7 +30,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Child 2"
+        android:text="Susan"
         android:id="@+id/childButton2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -38,7 +38,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parent"
+        android:text="Mom and Dad"
         android:id="@+id/parentButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

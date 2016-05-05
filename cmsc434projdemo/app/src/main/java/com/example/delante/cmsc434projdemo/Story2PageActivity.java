@@ -272,12 +272,13 @@ public class Story2PageActivity extends AppCompatActivity {
                     break;
                 case 8:
                     //do nothing //pic_id = R.drawable.color;
+                    //pic_id = R.drawable.pink;
                     break;
             }
 
 
-
-           ivGif.setImageDrawable(getResources().getDrawable(pic_id));
+            if (getArguments().getInt(ARG_SECTION_NUMBER) != 8)
+                ivGif.setImageDrawable(getResources().getDrawable(pic_id));
 
 
             /*try {
@@ -294,7 +295,7 @@ public class Story2PageActivity extends AppCompatActivity {
                 e.printStackTrace();
             }*/
 
-            ivGif.setImageDrawable(getResources().getDrawable(pic_id));
+            //ivGif.setImageDrawable(getResources().getDrawable(pic_id));
 /*            final MediaPlayer mp = MediaPlayer.create(getContext(), sound_id);
 =======
            // ivGif.setImageDrawable(getResources().getDrawable(pic_id));

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class ProfileSelectAcivityReal extends AppCompatActivity {
@@ -12,6 +13,8 @@ public class ProfileSelectAcivityReal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selection_screen);
+
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         final Button childButton1 = (Button) findViewById(R.id.childButton1);
         final Button childButton2 = (Button) findViewById(R.id.childButton2);

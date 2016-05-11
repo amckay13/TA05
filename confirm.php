@@ -6,7 +6,7 @@
         <link href="css/custom.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-custom">
             <div class="container">
                 <a class="navbar-brand" href="#">Storybook Dashboard</a>
                 <ul class="nav navbar-nav">

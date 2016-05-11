@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cmsc434projdemo.iml" filepath="$PROJECT_DIR$/cmsc434projdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../xamppfiles/htdocs/dashboard/TA05/cmsc434projdemo/app/app.iml" filepath="$PROJECT_DIR$/../../../../xamppfiles/htdocs/dashboard/TA05/cmsc434projdemo/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../xamppfiles/htdocs/dashboard/TA05/cmsc434projdemo/cmsc434projdemo.iml" filepath="$PROJECT_DIR$/../../../../xamppfiles/htdocs/dashboard/TA05/cmsc434projdemo/cmsc434projdemo.iml" />
     </modules>
   </component>
 </project>

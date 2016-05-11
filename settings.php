@@ -7,7 +7,7 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-custom">
             <div class="container">
                 <a class="navbar-brand" href="#">Storybook Dashboard</a>
                 <ul class="nav navbar-nav">

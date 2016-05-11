@@ -1,3 +1,12 @@
 body {
-    background: #ffffb3 !important;
+    background: #129793 !important;
+}
+
+h1 {
+    color: #FFF5C3 !important;
+}
+
+.navbar-custom {
+    color: #9BD7D5;
+    background-color: #9BD7D5;
 }

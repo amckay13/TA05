@@ -4,11 +4,12 @@
         <title>Parent Menu</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
+        <style type="text/css">body { background: navy !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */</style>
     </head>
     
     <body>
         
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-custom">
             <div class="container">
                 <a class="navbar-brand" href="#">Storybook Dashboard</a>
                 <ul class="nav navbar-nav">

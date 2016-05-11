@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class ParentStoreActivity extends AppCompatActivity {
         imageView.setImageDrawable(getResources().getDrawable(R.drawable.jackbean));
         imageView2.setImageDrawable(getResources().getDrawable(R.drawable.littlered));
         imageView3.setImageDrawable(getResources().getDrawable(R.drawable.littlepigs));
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     public void buyBeanstalk(View view) {

@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.delante.cmsc434projdemo.StoryPageRemoteActivity">
+    tools:context="com.example.delante.cmsc434projdemo.StoryPageRemoteActivity"
+    android:background="@color/background">
 
 
 
@@ -28,13 +29,6 @@
 
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_media_play" />
 
     <VideoView
         android:id="@+id/videoPlayer"
@@ -45,6 +39,7 @@
         android:paddingRight="200dp"
         android:padding="100dp"
         android:paddingStart="100dp"
-        android:paddingEnd="60dp" />
+        android:paddingEnd="60dp"
+        android:layout_gravity="bottom|right"/>
 
 </android.support.design.widget.CoordinatorLayout>

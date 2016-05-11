@@ -7,27 +7,29 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:background="@color/background">
 
         <activity
-            android:name=".LoginActivity">
+            android:name=".LoginActivity"
+            android:label="Log In">
         </activity>
 
         <activity
             android:name=".ProfileSelectAcivityReal"
-            android:label="selection_activity"
+            android:label="Pick a Profile"
             android:windowSoftInputMode="stateVisible|adjustResize">
         </activity>
 
         <activity
             android:name=".ChildPlayModeActivity"
-            android:label="childplay_activity"
+            android:label="Child Play Mode"
             android:windowSoftInputMode="stateVisible|adjustResize">
         </activity>
 
         <activity
             android:name=".ParentModeActivity"
-            android:label="parentplay_activity"
+            android:label="Parent Mode"
             android:windowSoftInputMode="stateVisible|adjustResize">
         </activity>
 
@@ -54,14 +56,14 @@
 
         <activity
             android:name=".StoryPageActivity"
-            android:label="@string/app_name"
+            android:label="Animals"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
 
         <activity
             android:name=".StoryPageRemoteActivity"
-            android:label="@string/app_name"
+            android:label="Animals - Remote Play"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
@@ -70,7 +72,9 @@
         </activity>
 
         <activity
-            android:name=".Story2PageActivity">
+            android:name=".Story2PageActivity"
+            android:label="Shapes and Colors"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
 

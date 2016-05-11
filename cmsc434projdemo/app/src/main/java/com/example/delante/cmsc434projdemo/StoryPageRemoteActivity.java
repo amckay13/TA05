@@ -121,7 +121,7 @@ public class StoryPageRemoteActivity extends AppCompatActivity {
 
         setText(getResources(),1);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,7 +129,7 @@ public class StoryPageRemoteActivity extends AppCompatActivity {
                 //         .setAction("Action", null).show();
                 speakOut(view.getRootView());
             }
-        });
+        });*/
     }
 
     private static void setText(Resources res, int position){

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Storybook</string>
+    <string name="app_name">StoryLingo</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Page %1$d</string>
     <string-array

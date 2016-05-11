@@ -33,16 +33,16 @@
         android:layout_height="wrap_content"
         android:text="Susan"
         android:id="@+id/childButton2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/childButton1"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mom and Dad"
         android:id="@+id/parentButton"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/childButton2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="76dp" />
+         />
 
 </RelativeLayout>

@@ -3,7 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
-    android:background="@color/background">
+    android:background="@color/background"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,13 +20,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Secondary Text Language Control"
+        android:text="Secondary Language"
         android:id="@+id/textView7"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/rgroup">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,21 +54,24 @@
         android:text="Narration"
         android:id="@+id/textView8"
         android:layout_marginTop="30px"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
         android:id="@+id/radioButton"
-        android:checked="true" />
+        android:checked="true"
+        android:layout_gravity="center_horizontal"/>
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
         android:id="@+id/radioButton2"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_gravity="center_horizontal"/>
 
 
 </LinearLayout>

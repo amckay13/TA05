@@ -72,7 +72,7 @@ public class Story2PageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story_page);
         //if the settings weren't manually changed, story2 default is spanish
         if (loc2 == null) {
-            loc2 = spa;
+            loc2 = rus;
         }
         //loc2 = spa;
 

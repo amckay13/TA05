@@ -10,14 +10,6 @@
     tools:context=".LoginActivity"
     android:background="@color/background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Storybook App"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,9 +17,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Username"
         android:id="@+id/textView2"
-        android:layout_marginTop="113dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/loginButton"
+        android:layout_alignEnd="@+id/loginButton" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -44,9 +36,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Password"
         android:id="@+id/textView3"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_below="@+id/usernameInput"
+        android:layout_alignRight="@+id/loginButton"
+        android:layout_alignEnd="@+id/loginButton" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,10 +53,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Log In"
         android:id="@+id/loginButton"
         android:layout_below="@+id/passwordInput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:drawableLeft = "@drawable/login"
+        android:background = "@color/background"/>
 
 </RelativeLayout>

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to Storybook!"
+        android:text="Welcome to StoryLingo!"
         android:id="@+id/textView4"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
@@ -34,32 +34,42 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Select Profile"
         android:id="@+id/textView"
-        android:layout_above = "@+id/childButton1"
+        android:layout_above = "@+id/buttonLayout"
         android:layout_centerHorizontal="true" />
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonLayout"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="John"
         android:id="@+id/childButton1"
-        android:layout_above="@+id/childButton2"
-        android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/boy"
+        android:layout_below="@+id/textView"
+        android:drawableTop = "@drawable/boy"
         android:background="@color/background"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Susan"
         android:id="@+id/childButton2"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:drawableLeft="@drawable/girl"
+        android:layout_below="@+id/childButton1"
+        android:drawableTop = "@drawable/girl"
         android:background="@color/background"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -67,13 +77,11 @@
         android:text="Parents"
         android:id="@+id/parentButton"
         android:layout_below="@+id/childButton2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="76dp"
-        android:drawableLeft = "@drawable/parents"
+        android:drawableTop = "@drawable/parents"
         android:background="@color/background"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"/>
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
 
-
+    </LinearLayout>
 
 </RelativeLayout>

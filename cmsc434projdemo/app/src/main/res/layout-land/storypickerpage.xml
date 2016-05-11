@@ -10,14 +10,84 @@
     tools:context=".LoginActivity"
     android:background="@color/background">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose a Mode!"
+        android:id="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radio_group"
+        android:layout_below = "@+id/textView1"
+>
+        <RadioButton android:id="@+id/radio_solo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solo"
+            android:drawableLeft = "@drawable/solo"
+            android:onClick="onRadioButtonClicked"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            />
+        <RadioButton android:id="@+id/radio_side"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side-by-Side"
+            android:drawableLeft = "@drawable/side"
+            android:onClick="onRadioButtonClicked"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            />
+        <RadioButton android:id="@+id/radio_remote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remote"
+            android:drawableLeft = "@drawable/remote"
+            android:onClick="onRadioButtonClicked"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            />
+    </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Pick a story!"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -26,7 +96,9 @@
         android:id="@+id/book1"
         android:layout_marginTop="63dp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/animal"
+        android:background="@color/background"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -34,16 +106,9 @@
         android:text="Shapes and Colors"
         android:id="@+id/book2"
         android:layout_below="@+id/book1"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animals (Remote-Play Mode)"
-        android:id="@+id/animalStoryRemoteMode"
-        android:layout_below="@+id/book2"
         android:layout_centerHorizontal="true"
-         />
-
+        android:drawableLeft="@drawable/shape"
+        android:background="@color/background"/>
+</LinearLayout>
 
 </RelativeLayout>
